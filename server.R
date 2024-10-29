@@ -12,9 +12,14 @@ server <- function(input, output) {
 
   output$map <- renderLeaflet({
     # Base map
-    leaflet() %>%
-      addProviderTiles(providers$Stadia.AlidadeSmoothDark) %>%
-      setView(-1.719069, 48.301249, zoom = 6)
+
+    leaflet(info) %>%
+      addProviderTiles(providers$CartoDB.DarkMatterNoLabels) %>%
+      setView(-1.719069, 48.301249, zoom = 6) %>%
+      addMarkers(
+        icon = ~logoIcons[name],
+        lng = ~lon,
+        lat = ~lat)
   })
 
   output$table <- renderReactable({
