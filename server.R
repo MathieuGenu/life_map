@@ -23,7 +23,8 @@ server <- function(input, output) {
 
 
   output$timeline <- renderTimevis({
-    timevis(data)
+    timevis(data,
+            groups = groups)
   })
 
 }
