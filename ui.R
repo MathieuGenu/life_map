@@ -1,4 +1,12 @@
 ui <- shiny::htmlTemplate(
+
   # Index Page
-  "www/index.html",
+  filename = "www/index.html",
+
+  leaflet_output = leafletOutput("map"),
+
+  table_output = reactableOutput("table"),
+
+  timevis_output = timevisOutput("timeline")
+
 )

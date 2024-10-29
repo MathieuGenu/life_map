@@ -10,4 +10,20 @@ server <- function(input, output) {
   #     nrow()
   # })
 
+  output$map <- renderLeaflet({
+    # Base map
+    leaflet() %>%
+      addProviderTiles(providers$Stadia.AlidadeSmoothDark) %>%
+      setView(-1.719069, 48.301249, zoom = 6)
+  })
+
+  output$table <- renderReactable({
+    reactable(iris)
+  })
+
+
+  output$timeline <- renderTimevis({
+    timevis(data)
+  })
+
 }

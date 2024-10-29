@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <title>Shiny HTML Template App</title>
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Mathieu Genu">
 
     <!-- CSS
     ================================================== -->
@@ -23,11 +23,25 @@
         ================================================== -->
     {{ headContent() }}
 
+
 </head>
 
 <body>
 
-  <h1>Toto</h1>
+<div class="container">
+  <div class="d-flex">
+    <div class="leftpane">
+      {{table_output}}
+    </div>
+    <div class="rightpane">
+      {{leaflet_output}}
+    </div>
+  </div>
+  <div class="bottompane">
+      {{timevis_output}}
+  </div>
+</div>
+
 
 </body>
 
