@@ -14,8 +14,8 @@ server <- function(input, output) {
     # Base map
 
     leaflet(info) %>%
-      addProviderTiles(providers$CartoDB.DarkMatterNoLabels) %>%
-      setView(-1.719069, 48.301249, zoom = 6) %>%
+      addProviderTiles(providers$Esri.WorldImagery) %>%
+      setView(-1.719069, 48.301249, zoom = 5) %>%
       addMarkers(
         icon = ~logoIcons[name],
         lng = ~lon,
@@ -30,6 +30,15 @@ server <- function(input, output) {
   output$timeline <- renderTimevis({
     timevis(data,
             groups = groups)
+  })
+
+  output$image_desc <- renderImage({
+    list(
+      src = info$img_desc[1],
+      filetype = "image/jpeg",
+      alt = "This is a chainring"
+    )
+
   })
 
 }

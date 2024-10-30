@@ -7,6 +7,8 @@ ui <- shiny::htmlTemplate(
 
   table_output = reactableOutput("table"),
 
-  timevis_output = timevisOutput("timeline")
+  timevis_output = timevisOutput("timeline"),
+
+  img_desc = imageOutput("image_desc")
 
 )

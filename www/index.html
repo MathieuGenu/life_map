@@ -16,11 +16,17 @@
 
     <!-- CSS
     ================================================== -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"> -->
+
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
+
     <!-- shiny stuff
-        ================================================== -->
+    ================================================== -->
     {{ headContent() }}
 
 
@@ -31,10 +37,17 @@
 <div class="container">
   <div class="d-flex">
     <div class="leftpane">
-      {{table_output}}
+      {{leaflet_output}}
     </div>
     <div class="rightpane">
-      {{leaflet_output}}
+      <div class="cta">
+	{{img_desc}}
+	<div class="cta__text-column">
+		<h2>Aspect ratio is great</h2>
+		<p>This image has an aspect ratio of 3/2.</p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">Read all about it</a>
+	</div>
+</div>
     </div>
   </div>
   <div class="bottompane">
