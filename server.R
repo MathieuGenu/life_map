@@ -32,13 +32,12 @@ server <- function(input, output) {
             groups = groups)
   })
 
-  output$image_desc <- renderImage({
-    list(
-      src = info$img_desc[1],
-      filetype = "image/jpeg",
-      alt = "This is a chainring"
-    )
 
-  })
+  # output$image_desc <- renderImage({
+  #   list(src = info$img_desc[1])
+  # })
+
+
+  output$image_desc<-renderText({c('<img src="',info$img_desc[2],'">')})
 
 }

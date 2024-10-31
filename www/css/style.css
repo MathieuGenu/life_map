@@ -61,7 +61,6 @@ body {
 
 
 
-
 .cta {
 	--shadowColor: 187 60% 40%;
 	/*display: flex;*/
@@ -77,8 +76,12 @@ body {
 }
 
 .cta img {
-	aspect-ratio: 3 / 2;
-	/*object-fit: cover;*/
+  /* display:block; */
+	/* aspect-ratio: 3 / 2; */
+	/* object-fit: contain !important; */
+	/* width: 50vw !important; */
+	width: 50% !important;
+	/* width: 100px !important; */
 	/*flex: 1 1 300px;
 	outline: 0.5rem solid;*/
 }
@@ -102,3 +105,5 @@ body {
 	font-weight: 700;
 	border: 0.35rem solid;
 }
+
+

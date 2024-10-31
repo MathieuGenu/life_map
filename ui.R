@@ -9,6 +9,8 @@ ui <- shiny::htmlTemplate(
 
   timevis_output = timevisOutput("timeline"),
 
-  img_desc = imageOutput("image_desc")
+  # img_desc = imageOutput("image_desc")
+
+  img_desc = htmlOutput("image_desc")
 
 )
