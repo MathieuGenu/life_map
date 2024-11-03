@@ -37,7 +37,20 @@ server <- function(input, output) {
   #   list(src = info$img_desc[1])
   # })
 
+  row <- 5
 
-  output$image_desc<-renderText({c('<img src="',info$img_desc[2],'">')})
+  output$image_desc<-renderText({c('<img src="',info$img_desc[row],'">')})
+
+  output$title <- renderText({info$content[row]})
+
+  output$location <- renderText({info$location[row]})
+
+  output$dates <- renderText({
+    if(is.na(info$end[row])) {
+      info$start[row]
+    } else {
+      paste0(info$start[row]," --> ",info$end[row])
+    }
+  })
 
 }

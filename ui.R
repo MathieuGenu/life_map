@@ -11,6 +11,12 @@ ui <- shiny::htmlTemplate(
 
   # img_desc = imageOutput("image_desc")
 
-  img_desc = htmlOutput("image_desc")
+  img_desc = htmlOutput("image_desc"),
+
+  title_desc = textOutput("title"),
+
+  location_desc = textOutput("location",inline = T),
+
+  dates_desc = textOutput("dates",inline = T)
 
 )

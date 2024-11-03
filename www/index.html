@@ -16,6 +16,7 @@
 
     <!-- CSS
     ================================================== -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"> -->
 
@@ -43,7 +44,11 @@
       <div class="cta">
         {{img_desc}}
 	      <div class="cta__text-column">
-		      <h2>Aspect ratio is great</h2>
+		      <h2>{{title_desc}}</h2>
+		      <ul>
+		        <li><i class="fa fa-map-marker"></i> {{location_desc}}</li>
+		        <li><i class="fa fa-calendar"></i> {{dates_desc}}</li>
+		      </ul>
 		      <p>This image has an aspect ratio of 3/2.</p>
 		      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">Read all about it</a>
 	      </div>
