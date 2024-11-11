@@ -38,6 +38,7 @@ h1 {
 
 
 .rightpane {
+  margin-left: 10px;
   width: 50%;
   height: 75vh !important;
   background-color: yellow;
@@ -50,7 +51,7 @@ h1 {
 }
 
 body {
-  margin: 0 !important;
+  margin: 0;
   /* font-size: 100% !important; */
 }
 
@@ -92,15 +93,17 @@ body {
 }
 
 .cta img {
-  /* display:block; */
+  margin: 10px;
+  display: block;
 	/* aspect-ratio: 3 / 2; */
 	/* object-fit: contain !important; */
 	/* width: 50vw !important; */
-	width: 50% !important;
-	max-height: 50% !important;
+	width: 30%;
+	height: auto;
+	max-height: 150px;
 	/* width: 100px !important; */
-	/*flex: 1 1 300px;
-	outline: 0.5rem solid;*/
+	/*flex: 1 1 300px;*/
+	outline: 0.5rem solid;
 }
 
 

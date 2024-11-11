@@ -17,6 +17,6 @@ ui <- shiny::htmlTemplate(
 
   location_desc = textOutput("location",inline = T),
 
-  dates_desc = textOutput("dates",inline = T)
+  dates_desc = htmlOutput("dates",inline = T)
 
 )
